@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Learn'it - Pythagorean theorem</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+</html>
+
+<body>
+<header class="header">
+ <!-- starting logo, text code [HEADER]-->
+ <center>
+ <p>
+  <h1 style="color: black">LRN'it <img src=
+"https://static.thenounproject.com/png/679294-200.png"
+    alt="LRN'it logo"
+    witdh="50"
+    height="45"/>
+  </h1>
+</p>
+</center>
+<center>
+<p>Pythagorean theorem</p>
+</center>
+<!--Ending logo, text code [HEADER]-->
+
+
+  <div class="topnav">
+    <a href="volume.html">Volume</a>
+    <a href="restrictionArea">Restriction area</a>
+    <a href="PT.html">Pythagorean theorem</a>
+  </div>
+</header>
+
+<!--Starting description code-->
+<center>
+  <h3>
+      Pythagorean theorem
+  </h3>
+</center>
+<!--STARTING IMAGE CODE-->
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Hypotenusa-kateter.svg" 
+alt="LRN'it PT image"
+ALIGN="right" 
+HSPACE="50"
+VSPACE="50"
+>
+<h2>There is an important connection between the lengths of the pages in a 
+  right-angled triangle. The connection is called the Pythagorean Theorem 
+  and got its name from the Greek mathematician Pythagoras, who lived about 
+  2,500 years ago. Let's see what the Pythagorean theorem says. If the lengths 
+  of the catheters in a right-angled triangle are a and b, and the length of the 
+  hypotenuse is c, then the relation is a² + b² = c²</h2>
+<!--ENDING IMAGE CODE-->
+<!--Ending description code-->
+<!------------------------------------------------------------------------->
+<!--Starting Calulator-->
+<script>
+function do_things() 
+{
+
+  var a = parseFloat(document.getElementById("a").value);
+  var b = parseFloat(document.getElementById("b").value);
+  var c = parseFloat(document.getElementById("c").value);
+  var output = document.getElementById("output");
+
+  if (Number.isNaN(a) && !Number.isNaN(b) && !Number.isNaN(c)) {
+    const a = Math.sqrt(c ** 2 - b ** 2);
+    output.textContent = ' ' + a;
+  }
+
+  if (Number.isNaN(b) && !Number.isNaN(a) && !Number.isNaN(c)) {
+    const b = Math.sqrt(c ** 2 - a ** 2);
+    output.textContent = ' ' + b;
+  }
+
+  if (Number.isNaN(c) && !Number.isNaN(a) && !Number.isNaN(b)) {
+    const c = Math.sqrt(a ** 2 + b ** 2);
+    output.textContent = ' ' + c;
+  }
+}
+</script>
+
+<h1>Pythagorean theorem Calulator</h1>
+<p1>Calculate the Hypotnuse given the A and B value</p1>
+<p>Side A: <input type="text" size="4" id="a"/></p>
+<br>
+<p>Side B: <input type="text" size="4" id="b"/></p>
+<br>
+<p>Hypotnuse: <input type="text" size="4" id="c"/></p>
+<br>
+ <button type="button" onclick="do_things()">Find the missing value</button>
+<br>
+<h3><p >The Missing side is: <span id="output"></span></p></h3>
+<!--ENDING CALCUATOR CODE-->
+
+  </head>
+</html>

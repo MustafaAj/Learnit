@@ -1,2 +1,0 @@
-# Learnit
-Created with CodeSandbox
